@@ -1,5 +1,5 @@
 export class Post {
-
+    id: number;
     titulo: string;
     texto: string;
     autor: string;
@@ -9,8 +9,8 @@ export class Post {
 
 
 
-    constructor(pTitulo: string, pTexto: string, pAutor: string, pImagen: string, pFecha: number, pCategoria: string) {
-
+    constructor(pId: number, pTitulo: string, pTexto: string, pAutor: string, pImagen: string, pFecha: number, pCategoria: string) {
+        this.id = pId;
         this.titulo = pTitulo;
         this.texto = pTexto;
         this.autor = pAutor;
