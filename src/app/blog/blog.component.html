@@ -1,25 +1,22 @@
-<div class="contenedor">
+<div class="container">
 
     <select (change)="onChange($event)">
-        <option value="todos">Todos</option>
+        <option value="todos">Todas las categorias</option>
         <option *ngFor="let categoria of getCategorias()" [value]="categoria">
-            {{categoria}}
+            {{categoria}
         </option>
     </select>
 
 </div>
 
-<div class="botones">
-    <button>Categoria</button>
-</div>
-
-<div class="Posts">
+<div class="Posts" class="col col-12 col-lg-6">
     <div class="post" *ngFor="let post of Allpost">
-        <h3> {{post.titulo}}</h3>
-        <p>{{post.texto}}</p>
-        <h3>{{post.autor}}</h3>
-        <img [src]="post.imagen">
-        <p>{{post.fecha}}</p>
         <h3>{{post.categoria}}</h3>
-    </div>
+            <h3> {{post.titulo}}</h3>
+            <p>{{post.texto}}</p>
+            <img [src]="post.imagen">
+            <h4>{{post.autor}}</h4>
+            <p>{{post.fecha}}</p>
+
+</div>
 </div>

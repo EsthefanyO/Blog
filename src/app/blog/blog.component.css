@@ -1,0 +1,17 @@
+
+.container{
+    width: 100%;
+    display: flex;
+    flex: wrap;
+    align-content: center;
+}
+
+.container option{
+    cursor: pointer;
+    background: coral;
+}
+.post img {
+    width: 400px;
+    display: flex;
+    cursor: pointer;
+}
