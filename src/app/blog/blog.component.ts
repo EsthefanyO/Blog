@@ -15,8 +15,18 @@ export class BlogComponent implements OnInit {
   constructor(private postService: PostService) { }
 
   ngOnInit(): void {
-    this.Allpost = this.postService.getAll();
+    this.Allpost = this.postService.arrPost;
   }
+
+  async onChange($event) {
+    if ($event.target.value == 'todos') {
+      this.Allpost = await this.postService.getAllPost();
+    } else {
+      this.Allpost = await this.postService.getPostByCategoria($event.target.value);
+    }
+  }
+
+
   getCategorias() {
     const cats = this.Allpost.map(post => post.categoria);
   }
